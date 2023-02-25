@@ -5,8 +5,9 @@
   --dark-blue:hsl(228, 11%, 9%);
   --very-dark-blue: hsl(216, 12%, 8%);
   --orange: hsl(25, 97%, 53%);
-  --fs-padding: 2rem;
-  --font-family: font-family: 'Overpass', sans-serif;
+  --fs-p2: 2rem;
+  --fs-p1: 1rem;
+  --font-family: 'Overpass', sans-serif;
   --text400: 400;
   --text700: 700;
 }

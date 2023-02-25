@@ -1,3 +1,4 @@
+import './Global-styles.css'; // Importe aqui
 import './App.css'
 import RatingCard from './Components/Card/RatingCard'
 

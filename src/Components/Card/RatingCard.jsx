@@ -2,6 +2,12 @@ import styles from "./RatingCard.module.css";
 import star from "../../assets/icon-star.svg";
 
 const RatingCard = () => {
+  const numbers = [1, 2, 3, 4, 5]
+
+  const teste =(e)=>{
+    console.log(e.target.value)
+  }
+  
   return (
     <>
       <div className={styles.cardWrapper}>
@@ -16,6 +22,14 @@ const RatingCard = () => {
             Please let us know how we did with your support request. All
             feedback is appreciated to help us improve our offering!
           </p>
+        </div>
+        <div className={styles.buttonsGroup}>
+          {numbers.map((number, index,)=>(
+            <button key={index} className={styles.btn} value={number} onClick={teste}> {number} </button>
+          ))}
+        </div>
+        <div className={styles.submit}>
+          <button onClick={{}} className={styles.submitButtom} type="submit">Submit</button>
         </div>
       </div>
     </>
