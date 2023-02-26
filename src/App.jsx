@@ -25,8 +25,8 @@ function App() {
     setShowRating(true)
   }
 
-  const isDisable = rating 
-
+  const isDisable = rating
+    
 
   return (
     <div className="App">
@@ -37,7 +37,7 @@ function App() {
         handlerating,
         handlesetShowRating,
         isDisable,
-        isSubmitDisabled
+        isSubmitDisabled,
         }}>
         {showRating ? <Rating /> : <Card />}
       </RatingContext.Provider>
