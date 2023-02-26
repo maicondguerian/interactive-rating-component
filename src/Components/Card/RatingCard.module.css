@@ -11,8 +11,9 @@
   --very-dark-blue: hsl(213, 20%, 18%);
   --orange: hsl(25, 97%, 53%);
   --fs-p2: 2rem;
-  --fs-p1: 1.1rem;
+  --fs-p1: 1.2rem;
   --fs-p0: 1rem;
+  --fs-p00: 1.5rem;
   --font-family: "Overpass", sans-serif;
   --text400: 400;
   --text700: 700;
@@ -27,7 +28,7 @@
   height: 415px;
   width: 405px;
   border-radius: 25px;
-  padding: var(--fs-p2);
+  padding: var(--fs-p00);
   display: flex;
   flex-direction: column;
   gap: var(--fs-p1);
@@ -43,7 +44,9 @@
     padding: var(--fs-p1);
     margin: var(--fs-p1);
   }
-
+  .imgWrappaer{
+    height: 20px;
+  }
   .img {
     height: 35px;
     width: 35px;
@@ -99,8 +102,8 @@
 @media screen and (max-width: 375px) {
   .cardWrapper {
     padding: var(--fs-p0);
-  }
 
+  }
   .img {
     height: 25px;
     width: 25px;
@@ -153,8 +156,7 @@
 
 .buttonsGroup > button  {
   font-size: 0.9rem;
-  line-height: 0.2rem;
-  height: 0.1;
+  margin-top: 0.5rem;
 }
 
 .buttonsGroup > button {
@@ -167,7 +169,10 @@
   font-weight: var(--text700);
   color: var(--white);
   transform: scaleY(1.1);
-  margin-bottom: var(--fs-p1);
+  margin-bottom: 0;
+}
+.descriptionWrapper {
+  margin-top: 0;
 }
 
 .descriptionWrapper > p {
@@ -176,6 +181,7 @@
   line-height: 1.4;
   font-family: var(--font-family);
   font-size: 15px;
+  
 }
 
 .btn {
@@ -206,6 +212,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 0.5rem;
 }
 
 .submitButtom {

@@ -11,7 +11,7 @@ const Card = () => {
   return (
     <>
       <div className={styles.cardWrapper}>
-        <div>
+        <div className={styles.imgWrapper}>
           <span className={styles.img}>{star}</span>
         </div>
         <div className={styles.titleWrapper}>
