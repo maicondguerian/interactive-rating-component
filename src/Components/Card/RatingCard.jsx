@@ -10,7 +10,7 @@ const Card = () => {
 
   return (
     <>
-      <div className={styles.cardWrapper}>
+      <form className={styles.cardWrapper}>
         <div>
           <span className={styles.img}>{star}</span>
         </div>
@@ -25,7 +25,7 @@ const Card = () => {
         </div>
         <div className={styles.buttonsGroup}>
           {numbers.map((number, index,) => (
-            <button key={index} className={styles.btn} value={number} onClick={handlerating}> <p>{number}</p> </button>
+            <button key={index} className={styles.btn} value={number} onClick={handlerating}> {number} </button>
           ))}
         </div>
         <div className={styles.submit}>
@@ -37,7 +37,7 @@ const Card = () => {
             {buttonText}
           </button>
         </div>
-      </div>
+      </form>
       <footer className={styles.att}>
         <code>
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

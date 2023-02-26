@@ -40,26 +40,28 @@ function App() {
     
   return (
     <main className="App">
-      <h1 className="hidden">Interactive rating component</h1>
-      <RatingContext.Provider
-      value={{
-        rating,
-        setRating,
-        handlerating,
-        handlesetShowRating,
-        isDisable,
-        isSubmitDisabled,
-        handlesetOffShowRating,
-        buttonText
-        }}>
-         {showRating ? (
-          <div className="slide-in">
-            <Rating />
-          </div>
-        ) : (
-          <Card />
-        )}
-      </RatingContext.Provider>
+      <section>
+        <h1 className="hidden">Interactive rating component</h1>
+        <RatingContext.Provider
+        value={{
+          rating,
+          setRating,
+          handlerating,
+          handlesetShowRating,
+          isDisable,
+          isSubmitDisabled,
+          handlesetOffShowRating,
+          buttonText
+          }}>
+          {showRating ? (
+            <div className="slide-in">
+              <Rating />
+            </div>
+          ) : (
+            <Card />
+          )}
+        </RatingContext.Provider>
+      </section>
     </main>
   );
 }
