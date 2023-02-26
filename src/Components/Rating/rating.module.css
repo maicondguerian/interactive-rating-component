@@ -19,7 +19,7 @@
   }
   
   .cardWrapper {
-    background-color: var(--main-bg);
+    background: radial-gradient(farthest-side at top center, hsl(215deg, 17%, 15%), var(--main-bg));
     height: 415px;
     width: 405px;
     border-radius: 25px;
@@ -45,7 +45,7 @@
   
   .ratingWrapper{
     background-color: var(--very-dark-blue);
-    width: 185px;
+    width: 180px;
     height: 30px;
     border-radius: 15px;
     display: flex;
@@ -141,14 +141,5 @@
   
   .ratingAppear {
     animation: fadeIn 0.3s ease-in-out forwards;
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
   

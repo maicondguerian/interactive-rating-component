@@ -9,6 +9,7 @@ function App() {
   const [rating, setRating] = useState(0);
   const [showRating, setShowRating] = useState(false);
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
+  const [buttonText, setButtonText] = useState('Submit');
 
   const handlerating = (e) =>{
     const ratingValue = e.currentTarget.value;
@@ -20,10 +21,16 @@ function App() {
       setIsSubmitDisabled(false);
     }
   }
-
+  
   const handlesetShowRating = () =>{
-    setShowRating(true)
+    setShowRating(false); 
+    setButtonText('Sending...');
+    setTimeout(() => {
+      setShowRating(true);
+      setButtonText('Submit');
+    }, 2000);
   }
+
 
   const handlesetOffShowRating= () =>{
     setShowRating(false)
@@ -32,7 +39,8 @@ function App() {
   const isDisable = rating
     
   return (
-    <div className="App">
+    <main className="App">
+      <h1 class="hidden">Interactive rating component</h1>
       <RatingContext.Provider
       value={{
         rating,
@@ -42,11 +50,17 @@ function App() {
         isDisable,
         isSubmitDisabled,
         handlesetOffShowRating,
+        buttonText
         }}>
-        {showRating ? <Rating className="ratingAppear" /> : <Card />}
+         {showRating ? (
+          <div className="slide-in">
+            <Rating />
+          </div>
+        ) : (
+          <Card />
+        )}
       </RatingContext.Provider>
-    </div>
-  )
+    </main>
+  );
 }
-
 export default App

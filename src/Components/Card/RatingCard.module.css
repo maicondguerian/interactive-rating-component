@@ -19,7 +19,8 @@
 }
 
 .cardWrapper {
-  background-color: var(--main-bg);
+  
+background: radial-gradient(farthest-side at top center, hsl(215deg, 17%, 15%), var(--main-bg));
   height: 415px;
   width: 405px;
   border-radius: 25px;
@@ -32,7 +33,7 @@
 }
 
 .img {
-  padding: 15px;
+  padding: var(--fs-p0);
   background-color: var(--very-dark-blue);
   border-radius: 50%;
   margin-bottom: 0.7rem;
@@ -44,9 +45,9 @@
 
 .buttonsGroup > button > p  {
   transform: scaleY(1.2);
-  font-size: 15px;
-  line-height: 4px;
-  height: 1px;
+  font-size: 0.9rem;
+  line-height: 0.2rem;
+  height: 0.1;
 }
 
 .buttonsGroup > button {
@@ -126,15 +127,3 @@
   cursor: default;
 }
 
-.ratingAppear {
-  animation: fadeIn 0.3s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
