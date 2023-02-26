@@ -1,16 +1,23 @@
 
-import { useState } from 'react'
 import './App.css'
-import RatingCard from './Components/Card/RatingCard'
+import { useState } from 'react'
+import Card from './Components/Card/ratingCard'
 import { RatingContext } from './Context/RatingContext'
+import Rating from './Components/Rating/Rating'
 
 function App() {
   const [rating, setRating] = useState(0)
+  const [showRating, setShowRating] = useState(false)
 
   const handlerating = (e) =>{
-    setRating(e.target.value)
+    setRating(e.currentTarget.value)
   }
 
+  const handlesetShowRating = () =>{
+    setShowRating(true)
+  }
+
+  const disable = setRating === ''
 
   return (
     <div className="App">
@@ -18,8 +25,11 @@ function App() {
       value={{
         rating,
         setRating,
-        handlerating}}>
-        <RatingCard />
+        handlerating,
+        handlesetShowRating,
+        disable
+        }}>
+        {showRating ? <Rating /> : <Card />}
       </RatingContext.Provider>
     </div>
   )
