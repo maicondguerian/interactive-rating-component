@@ -2,23 +2,24 @@
   font-family: var(--font-family);
 }
 
-
 :root {
-    --white: hsl(0, 0%, 100%);
-    --light-grey: hsl(217, 12%, 63%);
-    --medium-grey: hsl(216, 12%, 54%);
-    --dark-blue: hsl(228, 11%, 9%);
-    --very-dark-blue: hsl(213, 20%, 18%);
-    --orange: hsl(25, 97%, 53%);
-    --fs-p2: 2rem;
-    --fs-p1: 1.6rem;
-    --font-family: "Overpass", sans-serif;
-    --text400: 400;
-    --text700: 700;
-  }
+  --white: hsl(0, 0%, 100%);
+  --main-bg: hsl(215, 27%, 12%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(217, 12%, 63%);
+  --dark-blue: hsl(228, 11%, 9%);
+  --very-dark-blue: hsl(213, 20%, 18%);
+  --orange: hsl(25, 97%, 53%);
+  --fs-p2: 2rem;
+  --fs-p1: 1.1rem;
+  --fs-p0: 1rem;
+  --font-family: "Overpass", sans-serif;
+  --text400: 400;
+  --text700: 700;
+}
 
 .cardWrapper {
-  background-color: hsl(215, 20%, 16%);
+  background-color: var(--main-bg);
   height: 415px;
   width: 405px;
   border-radius: 25px;
@@ -26,27 +27,38 @@
   display: flex;
   flex-direction: column;
   gap: var(--fs-p1);
-  box-shadow: 0 0.063rem 0.188rem rgb(31 50 81 / 12%), 0 0.063rem 0.125rem rgb(31 50 81 / 24%);
-
+  box-shadow: 0 0.063rem 0.188rem rgb(31 50 81 / 12%),
+    0 0.063rem 0.125rem rgb(31 50 81 / 24%);
 }
 
-img {
+.img {
   padding: 15px;
   background-color: var(--very-dark-blue);
   border-radius: 50%;
   margin-bottom: 0.7rem;
+  display: grid;
+  height: 50px;
+  width: 50px;
+  place-items: center;
 }
 
+.buttonsGroup > button > p  {
+  transform: scaleY(1.2);
+  font-size: 15px;
+}
 .titleWrapper > h2 {
   font-weight: var(--text700);
   color: var(--white);
+  transform: scaleY(1.2);
+  font-size:26px ;
 }
 
 .descriptionWrapper > p {
-  color: var(--light-grey);
+  color: #959eac;
   font-weight: var(--text400);
-  font-size: 15px;
   line-height: 1.4;
+  font-family: var(--font-family);
+  font-size: 15px;
 }
 
 .btn {
@@ -57,21 +69,20 @@ img {
   cursor: pointer;
   background-color: var(--very-dark-blue);
   color: var(--light-grey);
-  font-size: 16px;
   font-weight: var(--text400);
   text-decoration: none;
-  font-family: Arial;
+  margin-top: var(--fs-p1);
 }
 
-.btn:hover{
-    background-color: var(--orange);
-    transition: all 0.3s ease-in-out;
-    color: var(--white);
+.btn:hover {
+  background-color: var(--orange);
+  transition: all 0.3s ease-in-out;
+  color: var(--white);
 }
 
-.btn:focus{
-    background-color: var(--light-grey);
-    color: var(--white);
+.btn:focus {
+  background-color: var(--light-grey);
+  color: var(--white);
 }
 
 .buttonsGroup {
@@ -81,23 +92,23 @@ img {
 }
 
 .submitButtom {
+  margin-top: var(--fs-p1);
   background-color: hsl(25, 97%, 53%);
   width: 340px;
-  height: 48px;
+  height: 45px;
   border-radius: 30px;
   border: none;
   color: var(--white);
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 15px;
   font-weight: var(--text700);
   cursor: pointer;
   box-shadow: rgb(0 0 0 / 10%) 0px 10px 10px;
 }
-.submitButtom:hover{
-    background-color:hsl(0, 0%, 100%);
-    color: hsl(25, 97%, 53%);
-    transition: all 0.3s ease-in-out;
+.submitButtom:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+  transition: all 0.3s ease-in-out;
 }
 
 /* animation: fadeIn 0.3s ease-in-out forwards; */
