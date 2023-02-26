@@ -6,18 +6,27 @@ import { RatingContext } from './Context/RatingContext'
 import Rating from './Components/Rating/Rating'
 
 function App() {
-  const [rating, setRating] = useState(0)
-  const [showRating, setShowRating] = useState(false)
+  const [rating, setRating] = useState(0);
+  const [showRating, setShowRating] = useState(false);
+  const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
 
   const handlerating = (e) =>{
-    setRating(e.currentTarget.value)
+    const ratingValue = e.currentTarget.value;
+    setRating(ratingValue);
+
+    if (ratingValue === "0") {
+      setIsSubmitDisabled(true);
+    } else {
+      setIsSubmitDisabled(false);
+    }
   }
 
   const handlesetShowRating = () =>{
     setShowRating(true)
   }
 
-  const disable = setRating === ''
+  const isDisable = rating 
+
 
   return (
     <div className="App">
@@ -27,7 +36,8 @@ function App() {
         setRating,
         handlerating,
         handlesetShowRating,
-        disable
+        isDisable,
+        isSubmitDisabled
         }}>
         {showRating ? <Rating /> : <Card />}
       </RatingContext.Provider>

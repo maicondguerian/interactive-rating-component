@@ -103,7 +103,7 @@
 
 .submitButtom {
   margin-top: var(--fs-p0);
-  background-color: hsl(25, 97%, 53%);
+  background-color: var(--orange);
   width: 340px;
   height: 45px;
   border-radius: 30px;
@@ -117,8 +117,11 @@
 }
 .submitButtom:hover {
   background-color: hsl(0, 0%, 100%);
-  color: hsl(25, 97%, 53%);
+  color: var(--orange);
   transition: all 0.3s ease-in-out;
 }
 
+.disable{
+  background-color: rgb(17, 196, 136);
+}
 /* animation: fadeIn 0.3s ease-in-out forwards; */
