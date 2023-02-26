@@ -31,7 +31,6 @@ function App() {
   }
   const isDisable = rating
     
-
   return (
     <div className="App">
       <RatingContext.Provider
@@ -44,7 +43,7 @@ function App() {
         isSubmitDisabled,
         handlesetOffShowRating,
         }}>
-        {showRating ? <Rating /> : <Card />}
+        {showRating ? <Rating className="ratingAppear" /> : <Card />}
       </RatingContext.Provider>
     </div>
   )
