@@ -10,7 +10,7 @@
   --dark-blue: hsl(228, 11%, 9%);
   --very-dark-blue: hsl(213, 20%, 18%);
   --orange: hsl(25, 97%, 53%);
-  --fs-p2: 2rem;
+  --fs-p2: 2.1rem;
   --fs-p1: 1.2rem;
   --fs-p0: 1rem;
   --fs-p00: 1.5rem;
@@ -28,7 +28,7 @@
   height: 415px;
   width: 405px;
   border-radius: 25px;
-  padding: var(--fs-p00);
+  padding: var(--fs-p2);
   display: flex;
   flex-direction: column;
   gap: var(--fs-p1);
