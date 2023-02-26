@@ -19,8 +19,8 @@
 }
 
 .cardWrapper {
-  
-background: radial-gradient(farthest-side at top center, hsl(215deg, 17%, 15%), var(--main-bg));
+
+  background: radial-gradient(farthest-side at top center, hsl(215deg, 17%, 15%), var(--main-bg));
   height: 415px;
   width: 405px;
   border-radius: 25px;
@@ -30,6 +30,38 @@ background: radial-gradient(farthest-side at top center, hsl(215deg, 17%, 15%), 
   gap: var(--fs-p0);
   box-shadow: 0 0.063rem 0.188rem rgb(31 50 81 / 12%),
     0 0.063rem 0.125rem rgb(31 50 81 / 24%);
+}
+
+@media screen and (max-width: 410px) {
+  .cardWrapper {
+    width: 370px;
+  }
+}
+
+
+@media  (max-width: 410px) {
+  
+  .submitButtom{
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .cardWrapper {
+    width: 350px;
+  }
+}
+@media (max-width: 410px) {
+  
+  .submitButtom{
+    width: 250px;
+  }
+}
+
+@media (max-width: 365px) {
+  .submitButtom{
+    width: 235px;
+  }
 }
 
 .img {
@@ -43,28 +75,28 @@ background: radial-gradient(farthest-side at top center, hsl(215deg, 17%, 15%), 
   place-items: center;
 }
 
-.buttonsGroup > button > p  {
+.buttonsGroup>button>p {
   transform: scaleY(1.2);
   font-size: 0.9rem;
   line-height: 0.2rem;
   height: 0.1;
 }
 
-.buttonsGroup > button {
+.buttonsGroup>button {
   display: flex;
   align-items: center;
   justify-content: center;
- 
+
 }
 
-.titleWrapper > h2 {
+.titleWrapper>h2 {
   font-weight: var(--text700);
   color: var(--white);
   transform: scaleY(1.1);
-  font-size:26px ;
+  font-size: 26px;
 }
 
-.descriptionWrapper > p {
+.descriptionWrapper>p {
   color: #959eac;
   font-weight: var(--text400);
   line-height: 1.4;
@@ -116,14 +148,37 @@ background: radial-gradient(farthest-side at top center, hsl(215deg, 17%, 15%), 
   cursor: pointer;
   box-shadow: rgb(0 0 0 / 10%) 0px 10px 10px;
 }
+
 .submitButtom:hover {
   background-color: hsl(0, 0%, 100%);
   color: var(--orange);
   transition: all 0.3s ease-in-out;
 }
 
-.submitButtom:disabled{
+.submitButtom:disabled {
   opacity: 0.5;
   cursor: default;
 }
 
+.att {
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 13px;
+  width: 405px;
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: var(--fs);
+  font-size: 13px;
+  font-family: initial;
+}
+
+a {
+  color: var(--light-grey);
+}
+
+a:hover {
+  color: var(--orange);
+}
