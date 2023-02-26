@@ -40,7 +40,7 @@ function App() {
     
   return (
     <main className="App">
-      <h1 class="hidden">Interactive rating component</h1>
+      <h1 className="hidden">Interactive rating component</h1>
       <RatingContext.Provider
       value={{
         rating,
