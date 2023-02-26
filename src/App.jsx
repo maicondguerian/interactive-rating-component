@@ -25,6 +25,10 @@ function App() {
     setShowRating(true)
   }
 
+  const handlesetOffShowRating= () =>{
+    setShowRating(false)
+    setIsSubmitDisabled(true);
+  }
   const isDisable = rating
     
 
@@ -38,6 +42,7 @@ function App() {
         handlesetShowRating,
         isDisable,
         isSubmitDisabled,
+        handlesetOffShowRating,
         }}>
         {showRating ? <Rating /> : <Card />}
       </RatingContext.Provider>

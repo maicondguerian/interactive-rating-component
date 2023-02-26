@@ -3,13 +3,18 @@ import greeting from "../../assets/illustration-thank-you.svg";
 import { useContext } from "react";
 import { RatingContext } from "../../Context/RatingContext";
 import { FaArrowLeft } from "react-icons/fa";
-import '../../App'
+
+
 const Rating = () => {
-    const {rating} = useContext(RatingContext)
+    const {rating, handlesetOffShowRating} = useContext(RatingContext)
   return (
     <>
       <div className={styles.cardWrapper}>
-        <span> <FaArrowLeft /></span>
+       <div className={styles.return}>
+        <button className={styles.iconReturn} onClick={handlesetOffShowRating}>
+          <FaArrowLeft />
+          </button>
+       </div>
         <div className={styles.greetingThankYou}>
           <img src={greeting} alt="/illustration-thank-you" />
         </div>
@@ -25,11 +30,6 @@ const Rating = () => {
             more support, don't hesitate to get in touch! 
           </p>
         </div>
-        {/* <div className={styles.submit}>
-          <button className={styles.submitButtom} type="submit">
-            Submit
-          </button>
-        </div> */}
       </div>
     </>
   );
