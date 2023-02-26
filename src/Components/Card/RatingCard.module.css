@@ -167,6 +167,7 @@
   font-weight: var(--text700);
   color: var(--white);
   transform: scaleY(1.1);
+  margin-bottom: var(--fs-p1);
 }
 
 .descriptionWrapper > p {

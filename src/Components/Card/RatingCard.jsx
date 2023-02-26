@@ -10,7 +10,7 @@ const Card = () => {
 
   return (
     <>
-      <form className={styles.cardWrapper}>
+      <div className={styles.cardWrapper}>
         <div>
           <span className={styles.img}>{star}</span>
         </div>
@@ -37,7 +37,7 @@ const Card = () => {
             {buttonText}
           </button>
         </div>
-      </form>
+      </div>
       <footer className={styles.att}>
         <code>
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

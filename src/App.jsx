@@ -39,7 +39,7 @@ function App() {
   const isDisable = rating
     
   return (
-    <main className="App">
+    <div className="App">
       <section>
         <h1 className="hidden">Interactive rating component</h1>
         <RatingContext.Provider
@@ -62,7 +62,7 @@ function App() {
           )}
         </RatingContext.Provider>
       </section>
-    </main>
+    </div>
   );
 }
 export default App;
